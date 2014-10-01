@@ -1,20 +1,21 @@
 <?php
-
 /*
-Plugin Name: CodeTeam Livechat
+Plugin Name: CodeTeam LiveChat
 Plugin URI: http://www.livechat.codeteam.in
 Description: LiveChat plugin
-Version: 1.0
 Author: CodeTeam
 Author URI: http://www.codeteam.in
-License: GPL2
- */
+Version: 1.1
+*/
 
+if (is_admin())
+{
+	require_once(dirname(__FILE__).'/plugin_files/CTLCAdmin.class.php');
+	CTLCAdmin::get_instance();
+}
+else
+{
+	require_once(dirname(__FILE__).'/plugin_files/CTLC.class.php');
+	CTLC::get_instance();
+}
 
-define('CTLC_FILE', __FILE__);
-define('CTLC_PATH', plugin_dir_path(__FILE__));
-
-require CTLC_PATH . 'ctlc.php';
-
-new ctlc();
-?>
