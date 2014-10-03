@@ -19,7 +19,7 @@ _chat.push(["_setAccountID", "{$account_key}"]);
 	var scn = document.createElement("script");
 	scn.type = "text/javascript";
 	scn.async = true;
-	scn.src = "http://www.livechat.codeteam.in/js/plugin_new.js";
+	scn.src = "http://www.livechat.codeteam.in/js/plugin.js";
 	var s = document.getElementsByTagName("script")[0];
 	s.parentNode.insertBefore(scn, s);
 })();
