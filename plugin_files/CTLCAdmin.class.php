@@ -152,7 +152,7 @@ final class CTLCAdmin extends CTLC
 	protected function update_options($data)
 	{
 		// check if we are handling LiveChat settings form
-		if (isset($data['settings_form']) == false && isset($data['new_license_form']) == false)
+		if (isset($data['settings_form']) == false && isset($data['new_account_key_form']) == false)
 		{
 			return false;
 		}

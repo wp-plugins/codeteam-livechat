@@ -78,7 +78,6 @@ var CTLC =
 				}
 				
 				$('#ctlc_already_have .ajax_message').removeClass('message').addClass('wait').html('Please wait&hellip;');
-
 				$.getJSON('http://www.mylivechat.codeteam.in/Login/login?email='+email+'&password='+password+'&jsoncallback=?', function(Response)
 				{
 					if(Response.ReturnStatus == 1)
@@ -102,9 +101,9 @@ var CTLC =
 	{
 		$('#ctlc_new_account form').submit(function()
 		{
-			if (parseInt($('#new_account_key').val()) > 0)
+			if($('#new_account_key').val() != "")
 			{
-				return true;
+				return(true);
 			}
 
 			if (CTLC.validateNewLicenseForm())
@@ -129,8 +128,7 @@ var CTLC =
 					}
 				});
 			}
-
-			return false;
+			return(false);
 		});
 	},
 
@@ -146,7 +144,7 @@ var CTLC =
 		url += '&password='+encodeURIComponent($('#password').val());
 		url += '&website='+encodeURIComponent($('#website').val());
 		url += '&timezone_gmt='+encodeURIComponent(this.calculateGMT());
-		url += '&source=wordpress_signup';
+		url += '&source=wordpress';
 		url += '&jsoncallback=?';
 
 		$.getJSON(url, function(Response)
@@ -169,21 +167,21 @@ var CTLC =
 		{
 			alert('Please enter your name.');
 			$('#name').focus();
-			return false;
+			return(false);
 		}
 
 		if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i.test($('#email').val()) == false)
 		{
 			alert('Please enter a valid email address.');
 			$('#email').focus();
-			return false;
+			return(false);
 		}
 
 		if ($.trim($('#password').val()).length < 1)
 		{
 			alert('Please enter password.');
 			$('#password').focus();
-			return false;
+			return(false);
 		}
 
 		if ($('#password').val() !== $('#password_retype').val())
@@ -192,10 +190,10 @@ var CTLC =
 			$('#password').val('');
 			$('#password_retype').val('');
 			$('#password').focus();
-			return false;
+			return(false);
 		}
 
-		return true;
+		return(true);
 	},
 
 	calculateGMT: function()

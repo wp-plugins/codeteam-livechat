@@ -43,7 +43,7 @@ class SettingsHelper extends CTLCHelper
 			<h3><?php echo _e('Sign in to CodeTeam LiveChat'); ?></h3>
 			<div class="postbox_content">
 			<p><?php echo _e('Sign in to CodeTeam LiveChat and start chatting with your customers!'); ?></p>
-			<p><span class="btn"><a href="https://mylivechat.codeteam.in/" target="_blank"><?php _e('Sign in to web application'); ?></a></span></p>
+			<p><span class="btn"><a href="http://www.mylivechat.codeteam.in/" target="_blank"><?php _e('Sign in to web application'); ?></a></span></p>
 			</div>
 			</div>
 			<?php endif; ?>
@@ -123,8 +123,8 @@ class SettingsHelper extends CTLCHelper
 
 			<form method="post" action="?page=ctlc_settings" id="save_new_account_key">
 				<p>
-				<input type="hidden" name="new_account_key_form" value="1">
-				<input type="hidden" name="account_key" value="0" id="new_account_key">
+				<input type="hidden" name="new_account_key_form" value="1" />
+				<input type="hidden" name="account_key" id="new_account_key" />
 				</p>
 			</form>
 			</div>
