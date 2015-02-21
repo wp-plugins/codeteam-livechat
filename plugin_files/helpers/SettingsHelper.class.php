@@ -115,7 +115,7 @@ class SettingsHelper extends CTLCHelper
 
 				<p class="ajax_message"></p>
 				<p class="submit">
-					<input type="hidden" name="website" value="<?php echo bloginfo('url'); ?>">
+					<input type="hidden" id="website" name="website" value="<?php echo bloginfo('url'); ?>">
 					<input type="submit" value="Create account" id="submit" class="button-primary">
 				</p>
 				</div>
